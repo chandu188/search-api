@@ -1,0 +1,5 @@
+ServerAddress: ":8080"
+ESConfig:
+  Address: ["http://elasticsearch:9200"]
+  Index: products
+  Typ: product
