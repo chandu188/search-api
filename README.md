@@ -14,8 +14,8 @@ To run the application using docker: make docker-compose
 ### Usage
     1) To search products filtered by brand name Nike and 
             http://localhost:8080/api/v1/products?filter=brand:Nike
-    2) To query for `black shoes` in their title
-            http://localhost:8080/api/v1/products?q=title:black shoes
+    2) To query for `black shoes` use
+            http://localhost:8080/api/v1/products?q=black shoes
     3) To sort the results by a key (default is desc)
             http://localhost:8080/api/v1/products?filter=brand:Nike&sort_by=price:asc
             http://localhost:8080/api/v1/products?filter=brand:Nike&sort_by=price (desc)
@@ -25,5 +25,5 @@ To run the application using docker: make docker-compose
         and to retreive the next batch of results use `offset` key
             http://localhost:8080/api/v1/products?filter=brand:Nike&limit=5&offset=6
 
-    5) http://localhost:8080/index gives a simple UI to add and retrieve the products.
+    5) http://localhost:8080/index gives a simple UI to add and retrieve the products (it doesn't give any feedback if the add to product fails).
             
