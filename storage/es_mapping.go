@@ -19,22 +19,31 @@ const mapping = `
 		"product":{
 			"properties":{
 				"sku":{
-					"type":"keyword"
+					"type":"keyword",
+					"copy_to":"all"
 				},
 				"title":{
-					"type":"text"
+					"type":"text",
+					"copy_to":"all"
 				},
 				"brand":{
-					"type":"keyword"
+					"type":"keyword",
+					"copy_to":"all"
 				},
 				"tags":{
-					"type":"keyword"
+					"type":"keyword",
+					"copy_to":"all"
 				},
 				"price":{
-					"type":"double"
+					"type":"double",
+					"copy_to":"all"
 				},
 				"stock":{
-					"type":"integer"
+					"type":"integer", 
+					"copy_to":"all"
+				},
+				"all": {
+					"type": "text"
 				}
 			}
 		}

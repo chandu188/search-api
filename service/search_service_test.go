@@ -68,7 +68,6 @@ func TestSearchService(t *testing.T) {
 		m := make(map[string]string)
 		ims.fail = tc.failStorage
 		_, prob := psvc.GetProducts(SvcParams{
-			Queries: m,
 			Filters: m,
 			From:    1,
 			Size:    1,

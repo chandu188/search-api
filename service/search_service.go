@@ -8,7 +8,7 @@ import (
 
 type SvcParams struct {
 	Filters    map[string]string
-	Queries    map[string]string
+	Query      string
 	SortKeys   map[string]bool
 	From, Size int
 }
@@ -35,7 +35,7 @@ func (p *product) GetProducts(params SvcParams) (*model.PageOfProducts, *model.P
 	sorts := parseSortKeys(params.SortKeys)
 	products, count, err := p.st.GetProducts(storage.SearchParams{
 		Filters:  params.Filters,
-		Queries:  params.Queries,
+		Query:  params.Query,
 		Skip:     params.From,
 		Size:     params.Size,
 		SortKeys: sorts,

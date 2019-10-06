@@ -26,7 +26,7 @@ func NewProductHandler(svc service.Product) *ProductHandler {
 // GetProducts is handler for handling the products related search queries
 func (ph *ProductHandler) GetProducts(ctx *gin.Context) {
 	filters := parseKeyValue(ctx.QueryArray("filter"))
-	queries := parseKeyValue(ctx.QueryArray("q"))
+	query := ctx.Query("q")
 
 	ss := ctx.QueryArray("sort_by")
 	sortKeys := make(map[string]bool)
@@ -50,7 +50,7 @@ func (ph *ProductHandler) GetProducts(ctx *gin.Context) {
 
 	pp, prob := ph.service.GetProducts(service.SvcParams{
 		Filters:  filters,
-		Queries:  queries,
+		Query:    query,
 		From:     offset,
 		Size:     limit,
 		SortKeys: sortKeys,

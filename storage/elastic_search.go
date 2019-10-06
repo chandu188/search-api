@@ -54,8 +54,8 @@ func (es *elasticSearch) GetProducts(params SearchParams) ([]*model.Product, int
 		bQuery.Filter(tQuery)
 	}
 
-	for key, val := range params.Queries {
-		mQuery := elastic.NewMatchQuery(key, val)
+	if params.Query != "" {
+		mQuery := elastic.NewMatchQuery("all", params.Query)
 		bQuery.Must(mQuery)
 	}
 

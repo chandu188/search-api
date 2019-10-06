@@ -7,7 +7,7 @@ type SearchParams struct {
 	Skip     int
 	Size     int
 	Filters  map[string]string
-	Queries  map[string]string
+	Query  string
 	SortKeys []Sort
 }
 
