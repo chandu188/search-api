@@ -2,7 +2,7 @@
 ##### Assumptions:
     • Authentication: Implemented authentication using a middleware, which is BaiscAuth middleware and currently, the user accounts are hardcoded with a single user (username:password=chandu:password). It can be easily extended to write JWT middleware to support other types of authentication/authorization mechanisms
     • The elastic search used in the docker-compose is a single node cluster.
-    • 
+    • As add a product is not a requirement for the problem, I assumed that the input data will be valid and no validation of input data is implemented.
 
 ### Build
 ``` 
